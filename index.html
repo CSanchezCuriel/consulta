@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Información</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <form id="consultaForm">
+        <fieldset>
+            <legend>Elije tu tipo de búsqueda</legend>
+            <label><input type="radio" name="tipoBusqueda" value="estudiante" onchange="toggleCampos()"> Estudiante</label>
+            <label><input type="radio" name="tipoBusqueda" value="profesor" onchange="toggleCampos()"> Profesor</label>
+        </fieldset>
+        <div id="estudianteFields" class="hidden">
+            <label for="numControl">Número de control:</label>
+            <input type="text" id="numControl" name="numControl"><br>
+            <label for="carrera">Carrera:</label>
+            <input type="text" id="carrera" name="carrera"><br>
+            <label for="nombreEstudiante">Nombre:</label>
+            <input type="text" id="nombreEstudiante" name="nombreEstudiante"><br>
+            <label for="apellidosEstudiante">Apellidos:</label>
+            <input type="text" id="apellidosEstudiante" name="apellidosEstudiante"><br>
+        </div>
+        <div id="profesorFields" class="hidden">
+            <label for="claveEmpleado">Clave de empleado:</label>
+            <input type="text" id="claveEmpleado" name="claveEmpleado"><br>
+            <label for="turno">Turno:</label>
+            <input type="text" id="turno" name="turno"><br>
+            <label for="nombreProfesor">Nombre:</label>
+            <input type="text" id="nombreProfesor" name="nombreProfesor"><br>
+            <label for="apellidosProfesor">Apellidos:</label>
+            <input type="text" id="apellidosProfesor" name="apellidosProfesor"><br>
+        </div>
+        <button type="submit">Buscar</button>
+    </form>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
